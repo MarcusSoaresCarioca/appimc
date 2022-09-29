@@ -14,8 +14,9 @@ const style = StyleSheet.create({
     },
 
     divForm:{
-        flex:3,
+        flex:2,
         alignItems:'center',
+        justifyContent:'center',
         backgroundColor:'#DAFDBA'
         
     },
@@ -33,7 +34,10 @@ const style = StyleSheet.create({
 
     divResult:{
         flex:1,
-    
+        justifyContent:'center',
+        alignItems:'center',
+        padding:5,
+       
     },
 
     txtTitulo:{
@@ -56,6 +60,14 @@ const style = StyleSheet.create({
     txtBtn:{
         fontSize:16,
         color:"#fff"
+    },
+
+    txtResult:{
+        fontSize:23,
+    },
+
+    txtMsgResult:{
+        fontSize:23
     }
 
 })
