@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import Result from "../../componentes/Result";
 import style from "./style";
+
 
 export default function Imc(){
 
@@ -60,7 +62,7 @@ export default function Imc(){
                 value={peso}
                 onChangeText={setPeso}
                 ></TextInput>
-                <Text>Altura</Text>
+                <Text style={style.txtTituliInput}>Altura</Text>
                 <TextInput
                 style={style.input}
                 placeholder="ex 1.80"
@@ -74,9 +76,7 @@ export default function Imc(){
             </View>
 
             <View style={style.divResult}>
-                <Text style={style.txtResult}> Seu Imc e de: {result} </Text>
-                <Text style={style.txtMsgResult}>{msgResult}</Text>
-                
+                <Result/>
             </View>
         </View>
     )
