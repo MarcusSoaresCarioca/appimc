@@ -10,17 +10,7 @@ export default function Imc() {
     const [altura, setAltura] = useState(null);
     const [result, setResult] = useState(null);
     const [msgResult, setMsgResult] = useState("");
-
-    const listaImc = [
-        { id: 1, imc: 25.6},
-        { id: 2, imc: 29.2},
-        { id: 3, imc: 30.2},
-        { id: 4, imc: 25.6},
-        { id: 5, imc: 29.2},
-        { id: 6, imc: 30.2},
-    ]
-
-    
+    const [lista,setLista] = useState([])
 
 
 
@@ -28,6 +18,9 @@ export default function Imc() {
         if (peso != null && altura != null) {
             let imc = (peso / (altura * altura)).toFixed(2)
             setResult(imc)
+            let numeroAl = peso * Math.random(imc)
+            setLista((arr) => [...arr, {id: numeroAl, resultImc: imc }])
+            console.log (lista)
 
             if (imc < 18.5) {
                 setMsgResult("Abaixo do peso")
@@ -91,11 +84,11 @@ export default function Imc() {
 
                 <FlatList
                     showsVerticalScrollIndicator={false}
-                    data={listaImc}
+                    data={lista}
                     renderItem={({item}) => {
                         return (
                             <View>
-                                <Text style={style.txtList}>Histórico de Imc: {item.imc}</Text>
+                                <Text style={style.txtList}>Histórico de IMC = {item.resultImc}</Text>
                             </View>
                         )
                 }}

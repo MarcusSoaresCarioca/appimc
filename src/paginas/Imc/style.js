@@ -74,7 +74,7 @@ const style = StyleSheet.create({
     },
 
     txtList:{
-        fontSize:20,
+        fontSize:18,
         color:'#fff'
     }
 
