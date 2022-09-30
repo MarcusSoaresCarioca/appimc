@@ -1,14 +1,12 @@
-import React, {useState} from "react";
-import { View,Text, ProgressViewIOSComponent } from "react-native";
-import style from "../../paginas/Imc/style";
+import React, { useState } from "react";
+import { View, Text, } from "react-native";
+import style from "./style";
 
-
-
-export default  function Result(){
-    return(
+export default function Result({result,msgResult}) {
+    return (
         <View>
-        <Text style={style.txtResult}> Seu Imc e de {result} </Text>
-        <Text style={style.txtMsgResult}>{msgResult}</Text>
+            <Text style={style.txtResult}>{result} </Text>
+            <Text style={style.txtResult}>{msgResult}</Text>
         </View>
     )
 }
